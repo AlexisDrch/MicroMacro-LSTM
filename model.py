@@ -1,3 +1,14 @@
+import torch
+import torch.nn as nn
+from torch.autograd import Variable
+import os.path as op
+import numpy as np
+import torch
+import torch.nn as nn
+from sklearn import svm
+from torch.nn.utils import weight_norm
+
+
 class LSTM_MicMac(nn.Module):
     def __init__(self, input_size_rnn, hidden_size, output_size_rnn, dropout = 0.2):
         '''
